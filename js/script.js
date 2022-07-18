@@ -10,29 +10,30 @@ function getPlayerChoice (){
   return playerChoice
 }
 
-function play() {
+function playRound() {
   let playerChoice = getPlayerChoice()
   let computerChoice = getComputerChoice()
 
   switch (true) {
     case playerChoice == 'ROCK' && computerChoice == 'Paper':
-      console.log('You lose! Paper beats Rock');
+      return 'You lose! Paper beats Rock';
       break;
     case playerChoice == 'PAPER' && computerChoice == 'Scissors':
-      console.log('You lose! Scissors beats Paper');
+      return 'You lose! Scissors beats Paper';
       break;
     case playerChoice == 'SCISSORS' && computerChoice == 'Rock':
-      console.log('You lose! Rock beats Scissors');
+      return 'You lose! Rock beats Scissors';
       break;
     case computerChoice == 'Scissors' && playerChoice == 'ROCK':
-      console.log('You Win! Rock beats Scissors');
+      return 'You Win! Rock beats Scissors';
       break;
     case computerChoice == 'Rock' && playerChoice == 'PAPER':
-      console.log('You Win! Paper beats Rock');
+      return 'You Win! Paper beats Rock';
       break;
     case computerChoice == 'Paper' && playerChoice == 'SCISSORS':
-      console.log('You Win! Scissors beats Paper')
+      return 'You Win! Scissors beats Paper';
       break;
   }
 }
-play()
+
+// play()
