@@ -1,12 +1,12 @@
 function getComputerChoice () {
-const weapons = ['Rock', 'Paper', 'Scissors'];
+const weapons = ['rock', 'paper', 'scissors'];
   const number = Math.floor(Math.random() * weapons.length)
   const computerChoice = weapons[number]
   return computerChoice
 }
   
 function getPlayerChoice (){
-  const playerChoice = prompt("Choose Your Weapon: Rock, Paper or Scissors?", "Rock").toUpperCase()
+  const playerChoice = prompt("Choose Your Weapon: Rock, Paper or Scissors?", "Rock").toLowerCase()
   return playerChoice
 }
 
@@ -15,25 +15,34 @@ function playRound() {
   let computerChoice = getComputerChoice()
 
   switch (true) {
-    case playerChoice == 'ROCK' && computerChoice == 'Paper':
+    case playerChoice === computerChoice:
+      return 'Tie Game';
+      break;
+    case playerChoice == 'rock' && computerChoice == 'paper':
       return 'You lose! Paper beats Rock';
       break;
-    case playerChoice == 'PAPER' && computerChoice == 'Scissors':
+    case playerChoice == 'paper' && computerChoice == 'scissors':
       return 'You lose! Scissors beats Paper';
       break;
-    case playerChoice == 'SCISSORS' && computerChoice == 'Rock':
+    case playerChoice == 'scissors' && computerChoice == 'rock':
       return 'You lose! Rock beats Scissors';
       break;
-    case computerChoice == 'Scissors' && playerChoice == 'ROCK':
+    case computerChoice == 'scissors' && playerChoice == 'rock':
       return 'You Win! Rock beats Scissors';
       break;
-    case computerChoice == 'Rock' && playerChoice == 'PAPER':
+    case computerChoice == 'rock' && playerChoice == 'paper':
       return 'You Win! Paper beats Rock';
       break;
-    case computerChoice == 'Paper' && playerChoice == 'SCISSORS':
+    case computerChoice == 'paper' && playerChoice == 'scissors':
       return 'You Win! Scissors beats Paper';
       break;
   }
 }
 
-// play()
+function game() {
+  for (let i = 0; i< 5; i++){
+    console.log(playRound())
+  }
+}
+
+game()
