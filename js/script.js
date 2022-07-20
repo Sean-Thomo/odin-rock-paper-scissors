@@ -45,4 +45,14 @@ function game() {
   }
 }
 
-game()
+// game()
+const log = () => {
+  const buttons = document.querySelectorAll('.btn');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      alert(btn.id);
+    })
+  })
+}
+
+log()
