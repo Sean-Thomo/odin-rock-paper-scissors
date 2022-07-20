@@ -23,7 +23,7 @@ function playRound(playerChoice, computerChoice) {
   let computerScore = 0;
   let playerScore = 0;
 
-  while (computerScore < 5 || playerChoice < 5){
+  while (computerScore < 5 || playerScore < 5){
     switch (true) {
       case playerChoice === computerChoice:
         computerScore += 0;
