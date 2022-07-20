@@ -50,6 +50,12 @@ function playRound(playerChoice, computerChoice) {
     }
   }
 
+  if (playerScore > computerScore) {
+    return 'We WON! We\'ll witness a few more trips around the sun'
+  } else {
+    return 'We LOST! No more listening to Kendrick and playing video games'
+  }
+
 }
 
 function game() {
