@@ -26,8 +26,6 @@ function playRound(playerChoice, computerChoice) {
   while (computerScore < 5 || playerScore < 5){
     switch (true) {
       case playerChoice === computerChoice:
-        computerScore += 0;
-        playerScore += 0;
         return 'Tie Game';
       case playerChoice == 'rock' && computerChoice == 'paper':
         computerScore ++;
