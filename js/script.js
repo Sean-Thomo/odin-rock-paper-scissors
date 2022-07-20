@@ -7,11 +7,8 @@ const weapons = ['rock', 'paper', 'scissors'];
   
 function getPlayerChoice (){
   const buttons = document.querySelectorAll('.btn');
-  let result = document.querySelector('.result h4');
-  let computerScore = 0;
-  let playerScore = 0;
+  let result = document.querySelector('.result');
 
-  
   buttons.forEach( btn => {
     btn.addEventListener('click', () => {
       let playerChoice = btn.id;
@@ -22,6 +19,8 @@ function getPlayerChoice (){
 }
 
 function playRound(playerChoice, computerChoice) {
+  // let computerScore = 0;
+  // let playerScore = 0;
 
   switch (true) {
     case playerChoice === computerChoice:
