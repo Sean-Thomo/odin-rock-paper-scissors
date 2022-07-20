@@ -26,18 +26,26 @@ function playRound(playerChoice, computerChoice) {
   while (computerScore < 5 || playerChoice < 5){
     switch (true) {
       case playerChoice === computerChoice:
+        computerScore += 0;
+        playerScore += 0;
         return 'Tie Game';
       case playerChoice == 'rock' && computerChoice == 'paper':
+        computerScore ++;
         return 'You lose! Paper beats Rock';
       case playerChoice == 'paper' && computerChoice == 'scissors':
+        computerScore ++;
         return 'You lose! Scissors beats Paper';
       case playerChoice == 'scissors' && computerChoice == 'rock':
+        computerScore ++;
         return 'You lose! Rock beats Scissors';
       case computerChoice == 'scissors' && playerChoice == 'rock':
+        playerScore ++;
         return 'You Win! Rock beats Scissors';
       case computerChoice == 'rock' && playerChoice == 'paper':
+        playerScore ++;
         return 'You Win! Paper beats Rock';
       case computerChoice == 'paper' && playerChoice == 'scissors':
+        playerScore ++;
         return 'You Win! Scissors beats Paper';
     }
   }
