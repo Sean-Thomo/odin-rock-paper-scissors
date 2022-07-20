@@ -6,18 +6,22 @@ const weapons = ['rock', 'paper', 'scissors'];
 }
   
 function getPlayerChoice (){
-  // const playerChoice = prompt("Choose Your Weapon: Rock, Paper or Scissors?", "Rock").toLowerCase()
   const buttons = document.querySelectorAll('.btn');
+  let result = document.querySelector('.result h4');
+  let computerScore = 0;
+  let playerScore = 0;
+
+  
   buttons.forEach( btn => {
-    let playerChoice = btn.id
-    btn.addEventListener('click', playRound())
+    btn.addEventListener('click', () => {
+      let playerChoice = btn.id;
+      let computerChoice = getComputerChoice()
+      result.innerHTML = playRound(playerChoice, computerChoice)
+    })
   })
-  return playerChoice
 }
 
-function playRound() {
-  let playerChoice = getPlayerChoice()
-  let computerChoice = getComputerChoice()
+function playRound(playerChoice, computerChoice) {
 
   switch (true) {
     case playerChoice === computerChoice:
@@ -38,9 +42,7 @@ function playRound() {
 }
 
 function game() {
-  for (let i = 0; i< 5; i++){
-    console.log(playRound())
-  }
+  getPlayerChoice()
 }
 
-// game()
+game()
