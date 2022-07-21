@@ -21,7 +21,10 @@ function getPlayerChoice (){
       
       if (playerScore === 5 || computerScore ===5){
         pickWinner();
-        resetGame();
+        
+        setTimeout(function () {
+          resetGame();
+        }, 1000);
       }
     })
   })
