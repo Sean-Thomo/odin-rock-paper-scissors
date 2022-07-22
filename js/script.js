@@ -18,7 +18,7 @@ function getPlayerChoice (){
       let playerChoice = btn.id;
       let computerChoice = getComputerChoice();
       result.innerHTML = playRound(playerChoice, computerChoice);
-      
+
       if (playerScore === 5 || computerScore === 5){
         pickWinner();
       }
@@ -33,7 +33,7 @@ restartGame.addEventListener('click', () => {
 })
 
 function playRound(playerChoice, computerChoice) {
-  while (computerScore < 5 || playerScore < 5){
+  while (computerScore < 5 && playerScore < 5){
     switch (true) {
       case playerChoice === computerChoice:
         return 'Tie Game';
