@@ -1,5 +1,6 @@
 let computerScore = 0;
 let playerScore = 0;
+let result = document.querySelector('.result');
 
 function getComputerChoice () {
   const weapons = ['rock', 'paper', 'scissors'];
@@ -10,14 +11,17 @@ function getComputerChoice () {
   
 function getPlayerChoice (){
   const buttons = document.querySelectorAll('.btn');
-  let result = document.querySelector('.result');
+  let restartGame = document.getElementById('reset')
+  restartGame.addEventListener('click', () => {
+    resetGame();
+  })
 
   // Call playRound() whenever a button is clicked
   buttons.forEach( btn => {
     btn.addEventListener('click', () => {
       let playerChoice = btn.id;
       let computerChoice = getComputerChoice();
-      result.innerHTML = playRound(playerChoice, computerChoice);
+      result.textContent = playRound(playerChoice, computerChoice);
 
       if (playerScore === 5 || computerScore === 5){
         pickWinner();
@@ -26,11 +30,6 @@ function getPlayerChoice (){
   })
 
 }
-
-let restartGame = document.getElementById('reset')
-restartGame.addEventListener('click', () => {
-  resetGame();
-})
 
 function playRound(playerChoice, computerChoice) {
   while (computerScore < 5 && playerScore < 5){
@@ -67,30 +66,28 @@ function playRound(playerChoice, computerChoice) {
 }
 
 function pickWinner(){
-  let result = document.querySelector('.result')
-
   if (playerScore > computerScore) {
-    result.innerHTML = 'We WON! We\'ll witness a few more trips around the sun'
+    result.textContent = 'We WON! We\'ll witness a few more trips around the sun'
   } else {
-    result.innerHTML = 'We LOST! No more listening to Kendrick and playing video games'
+    result.textContent = 'We LOST! No more listening to Kendrick and playing video games'
   }
 }
 
 function resetGame() {
   playerScore= 0;
   computerScore =0;
-  displayComputerScore()
-  displayPlayerScore()
+  result.textContent = "";
+  console.log('Reset');
 }
 
 function displayPlayerScore(){
   let playerDisplay = document.querySelector('#playerScore');
-  playerDisplay.innerHTML = playerScore;
+  playerDisplay.textContent = playerScore;
 }
 
 function displayComputerScore(){
   let computerDisplay = document.querySelector('#computerScore');
-  computerDisplay.innerHTML = computerScore;
+  computerDisplay.textContent = computerScore;
 }
 
 function game() {
