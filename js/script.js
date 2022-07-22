@@ -19,17 +19,18 @@ function getPlayerChoice (){
       let computerChoice = getComputerChoice();
       result.innerHTML = playRound(playerChoice, computerChoice);
       
-      if (playerScore === 5 || computerScore ===5){
+      if (playerScore === 5 || computerScore === 5){
         pickWinner();
-        
-        setTimeout(function () {
-          resetGame();
-        }, 1000);
       }
     })
   })
 
 }
+
+let restartGame = document.getElementById('reset')
+restartGame.addEventListener('click', () => {
+  resetGame();
+})
 
 function playRound(playerChoice, computerChoice) {
   while (computerScore < 5 || playerScore < 5){
