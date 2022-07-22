@@ -18,14 +18,7 @@ main{
 .container{
   margin: auto;
   padding: 3em;
-}
-
-.buttons,
-.result,
-.score{
-  display: grid;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 .btn{
