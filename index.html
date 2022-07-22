@@ -6,25 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock Paper Scissors</title>
   <script defer src="js/script.js"></script>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>Earth is in danger of being taken over by sentient A.I.</h1>
-  <h1>Only a Rock, Paper, Scissors match gives us a chance to live. Will you take on the challenge?</h1>
+  <main>
+    <div class="container">
+      <h2>Earth is in danger of being taken over by sentient A.I.</h2>
+      <h2>Only a Rock, Paper, Scissors match gives us a chance to live. Will you take on the challenge?</h2>
+  
+      <div>
+        <h1 class="result"></h1>
+      </div>
+      <div class="score">
+        <p>Your Score: </p><span  id="playerScore"></span>
+        <p>Computer Score: </p><span  id="computerScore"></span>
+      </div>
 
-  <div class="container">
-    <div >
-      <h1 class="result"></h1>
+      <div class="weapons">
+        <button class="btn" id="rock">Rock</button>
+        <button class="btn" id="paper">Paper</button>
+        <button class="btn" id="scissors">Scissors</button>
+      </div>
+      <button class="btn" id="reset">Restart Game</button>
     </div>
-    <p>Your Score: </p><span  id="playerScore"></span>
-    <p>Computer Score: </p><span  id="computerScore"></span>
-    <div class="weapons">
-      <button class="btn" id="rock">Rock</button>
-      <button class="btn" id="paper">Paper</button>
-      <button class="btn" id="scissors">Scissors</button>
-    </div>
-
-    <button id="reset">Restart Game</button>
-  </div>
+  </main>
 
 </body>
 </html>

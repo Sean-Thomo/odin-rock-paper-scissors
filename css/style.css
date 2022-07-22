@@ -4,3 +4,20 @@
   box-sizing: border-box;
 }
 
+main{
+  display: grid;
+  height: 100vh;
+}
+
+.container{
+  margin: auto;
+  padding: 3em;
+}
+
+.result{
+  justify-content: center;
+}
+
+.score{
+  display: inline-block;
+}
