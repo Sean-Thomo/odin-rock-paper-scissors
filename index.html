@@ -11,23 +11,29 @@
 <body>
   <main>
     <div class="container">
-      <h2>Earth is in danger of being taken over by sentient A.I.</h2>
-      <h2>Only a Rock, Paper, Scissors match gives us a chance to live. Will you take on the challenge?</h2>
-  
+      <div class="heading">
+        <h2>Earth is in danger of being taken over by sentient A.I.</h2>
+        <h2>Only a Rock, Paper, Scissors match gives us a chance to live. Will you take on the challenge?</h2>  
+      </div>
+      
       <div>
         <h1 class="result"></h1>
       </div>
+      
       <div class="score">
-        <p>Your Score: </p><span  id="playerScore"></span>
-        <p>Computer Score: </p><span  id="computerScore"></span>
+        <p>Your Score: </p><span id="playerScore"></span>
+        <p>Computer Score: </p><span id="computerScore"></span>
       </div>
 
-      <div class="weapons">
-        <button class="btn" id="rock">Rock</button>
-        <button class="btn" id="paper">Paper</button>
-        <button class="btn" id="scissors">Scissors</button>
+      <div class="buttons">
+        <div class="weapons">
+          <button class="btn" id="rock">Rock</button>
+          <button class="btn" id="paper">Paper</button>
+          <button class="btn" id="scissors">Scissors</button>
+        </div>
+        <button class="btn" id="reset">Restart Game</button>
       </div>
-      <button class="btn" id="reset">Restart Game</button>
+
     </div>
   </main>
 
